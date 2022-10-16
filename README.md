@@ -36,6 +36,12 @@ Index Message from your telegram account and find juicy content in it.
 > 
 > The telegram api is rate limited, so you download speed is limited by telegram
 
+## Results
+
+> Query `db.messages.find({type: 'messagemediadocument',mime_type: 'text/plain'}, {_id: 0, filename:1})`
+
+<img src="img/sample.png" alt="result sample">
+
 ## 🐳 MongoDB With docker
 
 You can use the docker-compose file to run a mongodb instance with web interface
