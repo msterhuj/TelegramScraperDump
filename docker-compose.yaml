@@ -1,0 +1,23 @@
+version: '3.1'
+
+# Warning: This is a development configuration. Do not use it in production.
+# MongoDB port: 27017
+# MongoDB data directory: ./data
+# MongoExpress web port: 8081
+
+services:
+  mongo:
+    image: mongo
+    container_name: telegram-indexer-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./data:/data/db
+
+  mongo-express:
+    image: mongo-express
+    container_name: telegram-indexer-mongo-express
+    ports:
+      - "8081:8081"
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://mongo:27017/

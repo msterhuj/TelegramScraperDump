@@ -1,0 +1,5 @@
+.idea/
+__pycache__/
+downloads/
+config.yaml
+*.session
